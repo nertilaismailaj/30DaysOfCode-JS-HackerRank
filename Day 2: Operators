@@ -1,0 +1,10 @@
+// Complete the solve function below.
+function solve(meal_cost, tip_percent, tax_percent) {
+
+    var tip = (tip_percent * meal_cost)/100;
+    var tax = (tax_percent * meal_cost)/100;
+    var totalCost = meal_cost + tip + tax;
+    console.log(Math.round(totalCost))
+    
+ return Math.round(totalCost)
+}
