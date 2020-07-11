@@ -1,0 +1,18 @@
+//https://www.hackerrank.com/challenges/30-arrays/problem
+
+function main() {
+    const n = parseInt(readLine(), 10);
+
+    const arr = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10));
+
+    const reversed = arr.reverse();
+    var ra = "";
+    
+    for (var y = 0; y <= reversed.length; y++)
+    {
+        if (reversed[y] != null){
+            ra =  ra + reversed[y] + " ";
+        }
+    }
+   console.log(ra)
+}
