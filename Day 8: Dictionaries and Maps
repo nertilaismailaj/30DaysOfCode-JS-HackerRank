@@ -1,1 +1,25 @@
 //https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
+
+function processData(input) {
+    //Enter your code here
+
+    message = input.split("\n");
+    var n = parseInt(message[0]);
+   
+    let phoneBook = new Map();
+    for (var x = 1; x <= n; x++)
+    {
+       let firstline = message[x];
+       phoneBook.set(firstline.substring(0, firstline.length - 9),
+                     firstline.substring(firstline.length - 8, firstline.length))
+    }
+
+    for (var y = n+1; y < message.length; y++)
+    {
+        if(phoneBook.has(message[y])){
+        console.log(message[y] + "=" +phoneBook.get(message[y]))
+        }else{
+            console.log("Not found")
+        }
+    }
+} 
