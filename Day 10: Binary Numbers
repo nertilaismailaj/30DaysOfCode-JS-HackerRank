@@ -1,1 +1,17 @@
 //https://www.hackerrank.com/challenges/30-binary-numbers/problem
+
+function count(a){
+  var count = 0;
+  // Count the number of iterations to reach a = 0. 
+  
+  while (a!=0) 
+  { 
+      // a AND shifted left a
+      // repeat until no 1s left on the binary number
+      
+      a = (a & (a << 1)); 
+      count++; 
+  }
+  console.log(count);
+} 
+
